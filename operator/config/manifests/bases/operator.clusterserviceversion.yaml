@@ -1,0 +1,45 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+    operators.operatorframework.io/builder: operator-sdk-v1.0.0
+    operators.operatorframework.io/project_layout: helm.sdk.operatorframework.io/v1
+  name: operator.vX.Y.Z
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions: {}
+  description: Operator for running max model on kubernetes / openshift
+  displayName: Max Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: true
+    type: OwnNamespace
+  - supported: true
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - ai
+  - ml
+  - max
+  - dax
+  - watson
+  links:
+  - name: Operator
+    url: https://operator.domain
+  maturity: alpha
+  provider:
+    name: IBM
+    url: www.IBM.com
+  version: 0.0.0
