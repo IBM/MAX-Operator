@@ -1,0 +1,14 @@
+# Default values for max.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+name: "max-object-detector" 
+containerPort: 5000
+deployment:
+  image: "codait/max-object-detector:latest"
+  replicas: 1
+  webapp:
+    disabled: "false"
+service:
+  type: "NodePort"
+  

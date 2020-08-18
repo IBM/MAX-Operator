@@ -1,0 +1,6 @@
+# Use the 'create api' subcommand to add watches to this file.
+- group: max.io
+  version: v1alpha1
+  kind: MaxModel
+  chart: helm-charts/max
+# +kubebuilder:scaffold:watch

@@ -1,0 +1,17 @@
+apiVersion: max.io/v1alpha1
+kind: MaxModel
+metadata:
+  name: maxmodel-sample
+spec:
+  # Default values copied from <project_dir>/helm-charts/max/values.yaml
+  containerPort: 5000
+  deployment:
+    image: codait/max-object-detector:latest
+    replicas: 1
+    webapp:
+      disabled: "false"
+  name: max-object-detector
+  service:
+    type: NodePort
+  
+  

@@ -1,0 +1,20 @@
+# permissions for end users to view maxmodels.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: maxmodel-viewer-role
+rules:
+- apiGroups:
+  - max.io
+  resources:
+  - maxmodels
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - max.io
+  resources:
+  - maxmodels/status
+  verbs:
+  - get

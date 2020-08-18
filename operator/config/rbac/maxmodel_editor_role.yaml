@@ -1,0 +1,24 @@
+# permissions for end users to edit maxmodels.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: maxmodel-editor-role
+rules:
+- apiGroups:
+  - max.io
+  resources:
+  - maxmodels
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - max.io
+  resources:
+  - maxmodels/status
+  verbs:
+  - get
