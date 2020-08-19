@@ -21,4 +21,4 @@ spec:
         - containerPort: {{ .Values.containerPort }}
         env:
         - name: DISABLE_WEB_APP
-          value: {{ .Values.deployment.webapp.disabled }}
+          value: {{ .Values.deployment.webapp.disabled | quote }}
